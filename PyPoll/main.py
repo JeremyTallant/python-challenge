@@ -53,11 +53,6 @@ with open(the_way) as csvfile:
         Percent = round((candidate_votes / totalvotes) * 100, 3)
         Percentage.append(str(Percent) + "%")
 
-
-
-
-
-
 #print the results in the terminal 
 print(f"Total Votes: {totalvotes}\n")
 print("--------------------------\n")
