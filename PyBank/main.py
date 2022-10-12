@@ -9,7 +9,7 @@ import os
 import csv
 
 #create a path to the csv file with a variable 
-the_path = os.path.join('Resources', 'budget_data.csv') 
+the_path = os.path.join('PyBank', 'Resources', 'budget_data.csv') 
 
 #create lists to store data
 Date = []
@@ -72,7 +72,7 @@ print(f"Greatest Increase in Profits: {gid} (${gi})\n")
 print(f"Greatest Decrease in Profits: {gdd} (${gd})\n")
 
 #set the variable for the results to be printed in a txt file 
-results = ('Analysis/results.txt')
+results = ('PyBank/Analysis/results.txt')
 
 #open the text file and write the results 
 with open(results, "w") as text:
