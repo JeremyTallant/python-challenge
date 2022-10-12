@@ -37,10 +37,10 @@ with open(the_way) as csvfile:
         #find the complete list of candidates who received votes and the total number of votes each candidate won 
         if row[2] not in Candidates:
             Candidates.append(row[2])
-            index= Candidates.index(row[2])
+            index = Candidates.index(row[2])
             Votes.append(1)
         else:
-            index=Candidates.index(row[2])
+            index = Candidates.index(row[2])
             Votes[index] += 1
 
      #find the winner of the election based on popular vote
