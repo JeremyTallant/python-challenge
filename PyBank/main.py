@@ -15,7 +15,7 @@ the_path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
 Date = []
 ProfitLosses = []
 
-#open then csv file
+#open the csv file
 with open(the_path) as csvfile:
     
     #use the csvreader to specify the delimiter and variable that holds contents 
