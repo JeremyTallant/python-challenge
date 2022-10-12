@@ -52,7 +52,9 @@ Intructions on how to run the code properly.
 
 - When running the code a text file will also be exported into the "Analysis" folder with the results
 
-Both python scripts are outlined to show a step by step process of what's happening in the script.
+Both python scripts are accompanied by an outline to walk you through the process step by step. 
+
+Dataset created by Trilogy Education Services, a 2U, Inc. brand.
 
 
 
