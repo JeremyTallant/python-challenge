@@ -42,7 +42,7 @@ Here is a screenshot of what the results look like in the terminal when running 
 
 ![Screen Shot 2022-10-12 at 3 50 16 PM (2)](https://user-images.githubusercontent.com/112406455/195445475-26190ad1-11e2-4c05-a81e-d58cef024f15.png)
 
-Intructions on how to run the code properly. 
+Intructions on how to run the code properly: 
 
 - First you will need to download the repository onto your computer. 
 
