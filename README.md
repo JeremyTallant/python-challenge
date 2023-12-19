@@ -1,4 +1,4 @@
-# Python Data Ventures: Navigating Financial Analysis and Election Insights
+# Automating with Python
 
 ![image](images/python.png)
 
