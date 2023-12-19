@@ -1,4 +1,4 @@
-Python-Challenge
+Python Data Ventures: Navigating Financial Analysis and Election Insights
 
 In this assignment we were given two datasets for two different scenarios where we were instructed to create Python scripts that analyzes the data for certain values and print the analysis in the terminal and export a text file with the results.
 
