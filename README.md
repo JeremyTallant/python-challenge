@@ -41,4 +41,6 @@ For the PyPoll challenge, we'll use the `election_data.csv`, structured with thr
 * **Candidate**: It list the candidate's name for whom the vote was cast.
 
 Each row in this dataset represents an individual vote, contributing to the overall analysis of the election results, including vote counts, candidate popularity, and voting demographics. 
+## Implementation
+## PyBank
 
