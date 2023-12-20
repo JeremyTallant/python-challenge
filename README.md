@@ -43,4 +43,11 @@ For the PyPoll challenge, we'll use the `election_data.csv`, structured with thr
 Each row in this dataset represents an individual vote, contributing to the overall analysis of the election results, including vote counts, candidate popularity, and voting demographics. 
 ## Implementation
 ## PyBank
-
+This section details the implementation of the Python script for the PyBank challenge, breaking down each part of the script for clarity. 
+### Importing Modules
+```python
+# Import modules
+import os
+import csv
+```
+First, we import the necessary modules. `os` is used for operating system-dependent functionality like reading file paths, and `csv` for reading and writing CSV files.
