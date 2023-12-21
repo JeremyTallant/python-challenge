@@ -6,7 +6,7 @@ import csv
 row1 = 0
 row2 = 0
 change_month = 0
-totalmonths = 0
+total_months = 0
 net = 0
 
 # Initialize lists to store data
