@@ -9,7 +9,7 @@ monthly_changes = []
 dates = []
 
 # Path to the CSV file
-csv_path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
+csv_path = os.path.join('Resources', 'budget_data.csv')
 
 # Processing the CSV file
 with open(csv_path, newline='') as csvfile:
@@ -58,7 +58,7 @@ print(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_incre
 print(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})\n")
 
 # Writing the results to a text file
-results_path = os.path.join('PyBank', 'Analysis', 'results.txt')
+results_path = os.path.join('Analysis', 'results.txt')
 with open(results_path, "w") as text_file:
     text_file.write("Financial Analysis\n")
     text_file.write("-------------------------------\n")
