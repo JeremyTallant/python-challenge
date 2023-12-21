@@ -51,3 +51,18 @@ import os
 import csv
 ```
 First, we import the necessary modules. `os` is used for operating system-dependent functionality like reading file paths, and `csv` for reading and writing CSV files.
+#### Initializing Variables and Lists
+```python
+# Initialize variables
+row1 = 0
+row2 = 0
+change_month = 0
+totalmonths = 0
+net = 0
+
+# Initialize lists to store data
+date = []
+profitLosses = []
+```
+Here, we initialize variables for tracking financial calculations and lists for storing date and profit/loss changes. This ensures they are ready to store data as we process the CSV file. 
+
