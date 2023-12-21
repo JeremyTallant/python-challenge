@@ -216,3 +216,46 @@ with open(results_file, "w") as text_file:
     text_file.write("--------------------------\n")
 ```
 The election results, including total votes, each candidate's vote percentage and count, and the winner, are printed to the console and also written to a text file for permanent record.
+## Insights
+### PyBank
+The Python script for the PyBank challenge yielded the following financial analysis:
+```plaintext
+Financial Analysis
+-------------------------------
+Total Months: 86
+Total: $22564198
+Average Change: $-8311.11
+Greatest Increase in Profits: Aug-16 ($1862002)
+Greatest Decrease in Profits: Feb-14 ($-1825558)
+```
+Analysis Summary
+* **Total Months**: The dataset covers a total of 86 months.
+* **Total Profit/Losses**: Over this period, the total profit/losses amount to $22,564,198.
+* **Average Monthly Change**: On average, there is a monthly change of -$8,311.11 in profit/losses.
+* **Greatest Increase in Profits**: The most significant monthly increase in profits occurred in August 2016, with an increase of $1,862,002.
+* **Greatest Decrease in Profits**: Conversely, the most substantial decrease in profits was in February 2014, with a decrease of $1,825,558.
+
+These insights provide a concise yet comprehensive overview of the company's financial performance over the examined period, highlighting key areas of profitability and periods of financial downturn.
+### PyPoll
+The Python script for the PyPoll challenge produced the following election results:
+```plaintext
+Election Results
+--------------------------
+Total Votes: 369711
+--------------------------
+Charles Casper Stockham: 23.049% (85213)
+Diana DeGette: 73.812% (272892)
+Raymon Anthony Doane: 3.139% (11606)
+--------------------------
+Winner: Diana DeGette
+--------------------------
+```
+Analysis Summary
+* **Total Votes Cast**: The election saw a total of 369,711 votes.
+* **Candidate Performance**:
+	* **Charles Casper Stockham** received 85,213 votes, accounting for 23.049% of the total votes.
+	* **Diana DeGette** emerged as the most popular candidate, securing 272,892 votes, which is 73.812% of the total votes.
+	* **Raymon Anthony Doane** garnered 11,606 votes, making up 3.139% of the votes.
+* **Election Winner**: The winner of the election, based on the popular vote, is **Diana DeGette**, who received the highest percentage of votes among the candidates.
+
+These insights provide a clear picture of the voting distribution among the candidates and the overall voting dynamics of the election. The data highlights both the individual success of the candidates and the decisive victory of Diana DeGette.
