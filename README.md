@@ -230,7 +230,7 @@ Average Change: $-8311.11
 Greatest Increase in Profits: Aug-16 ($1862002)
 Greatest Decrease in Profits: Feb-14 ($-1825558)
 ```
-Analysis Summary
+#### Analysis Summary
 * **Total Months**: The dataset covers a total of 86 months.
 * **Total Profit/Losses**: Over this period, the total profit/losses amount to $22,564,198.
 * **Average Monthly Change**: On average, there is a monthly change of -$8,311.11 in profit/losses.
@@ -253,7 +253,7 @@ Raymon Anthony Doane: 3.139% (11606)
 Winner: Diana DeGette
 --------------------------
 ```
-Analysis Summary
+#### Analysis Summary
 * **Total Votes Cast**: The election saw a total of 369,711 votes.
 * **Candidate Performance**:
 	* **Charles Casper Stockham** received 85,213 votes, accounting for 23.049% of the total votes.
