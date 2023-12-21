@@ -216,6 +216,7 @@ with open(results_file, "w") as text_file:
     text_file.write("--------------------------\n")
 ```
 The election results, including total votes, each candidate's vote percentage and count, and the winner, are printed to the console and also written to a text file for permanent record.
+
 ## Insights
 ### PyBank
 The Python script for the PyBank challenge yielded the following financial analysis:
