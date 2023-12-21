@@ -135,3 +135,84 @@ with open(results_path, "w") as text_file:
     text_file.write(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})\n")
 ```
 Finally, the script prints the analysis results to the terminal and writes them to a text file. This ensures that the results are easily accessible both during runtime and for later reference.
+### PyPoll
+This section outlines the implementation of the Python script for the PyPoll challenge, designed to analyze election data and extract meaningful insights, such as vote counts, candidate performance, and determining the election winner.
+#### Importing Modules
+```python
+# Importing necessary modules
+import os
+import csv
+```
+The script begins by importing necessary modules - `os` for file path operations and `csv` for handling CSV file operations.
+#### Setting the File Path
+```python
+# Creating a path to the election data CSV file
+csv_path = os.path.join('Resources', 'election_data.csv')
+```
+The path to the election data file (`election_data.csv`) is set using `os.path.join`. This ensures the file path is correctly formed regardless of the operating system.
+#### Initializing Variables and Data Structures
+```python
+# Initializing variables and lists for storing data
+total_votes = 0
+candidate_votes = {}
+percentage_votes = []
+```
+Variables and data structures are initialized for the analysis. `total_votes` tracks the total number of votes cast, `candidate_votes` is a dictionary for storing each candidate's vote count, and `percentage_votes` will hold the calculated vote percentages.
+#### Processing the CSV File
+```python
+# Processing the CSV file
+with open(csv_path) as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=',')
+    next(csvreader)  # Skipping the header row
+```
+The CSV file is opened and read. The `next` function skips the header row, and a loop is used to iterate through each subsequent row.
+#### Looping Through Rows and Tallying Votes
+```python
+ # Looping through each row of the CSV file
+    for row in csvreader:
+        total_votes += 1
+        candidate_name = row[2]
+
+        # Recording each candidate's vote count
+        if candidate_name not in candidate_votes:
+            candidate_votes[candidate_name] = 1
+        else:
+            candidate_votes[candidate_name] += 1
+```
+Within this loop, `total_votes` is incremented for each row (vote), and the script checks if the candidate (from `row[2]`) is already in the `candidate_votes` dictionary. If not, the candidate is added with a starting vote count of 1. Otherwise, their vote count is incremented.
+#### Calculating Vote Percentages and Determining the Winner
+```python
+# Calculating vote percentages and identifying the winner
+winner = max(candidate_votes, key=candidate_votes.get)
+winner_votes = candidate_votes[winner]
+
+for candidate, votes in candidate_votes.items():
+    percentage = round((votes / total_votes) * 100, 3)
+    percentage_votes.append(f"{candidate}: {percentage}% ({votes})")
+```
+After tallying the votes, the script calculates each candidate's percentage of the total votes. The candidate with the maximum votes is identified as the winner.
+#### Outputting the Election Results
+```python
+# Printing election results
+print("Election Results")
+print("--------------------------")
+print(f"Total Votes: {total_votes}")
+print("--------------------------")
+print('\n'.join(percentage_votes))
+print("--------------------------")
+print(f"Winner: {winner}")
+print("--------------------------")
+
+# Writing results to a text file
+results_file = os.path.join('Analysis', 'results.txt')
+with open(results_file, "w") as text_file:
+    text_file.write("Election Results\n")
+    text_file.write("--------------------------\n")
+    text_file.write(f"Total Votes: {total_votes}\n")
+    text_file.write("--------------------------\n")
+    text_file.write('\n'.join(percentage_votes) + "\n")
+    text_file.write("--------------------------\n")
+    text_file.write(f"Winner: {winner}\n")
+    text_file.write("--------------------------\n")
+```
+The election results, including total votes, each candidate's vote percentage and count, and the winner, are printed to the console and also written to a text file for permanent record.
