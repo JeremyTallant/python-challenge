@@ -220,6 +220,7 @@ The election results, including total votes, each candidate's vote percentage an
 ## Insights
 ### PyBank
 The Python script for the PyBank challenge yielded the following financial analysis:
+
 ```plaintext
 Financial Analysis
 -------------------------------
@@ -239,6 +240,7 @@ Analysis Summary
 These insights provide a concise yet comprehensive overview of the company's financial performance over the examined period, highlighting key areas of profitability and periods of financial downturn.
 ### PyPoll
 The Python script for the PyPoll challenge produced the following election results:
+
 ```plaintext
 Election Results
 --------------------------
