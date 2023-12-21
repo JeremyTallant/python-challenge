@@ -65,4 +65,9 @@ date = []
 profitLosses = []
 ```
 Here, we initialize variables for tracking financial calculations and lists for storing date and profit/loss changes. This ensures they are ready to store data as we process the CSV file. 
-
+#### Setting the File Path
+```python
+# Create path to csv file
+path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
+```
+The path to the `budget_data.csv` file is set using `os.path.join`, which ensures the correct file path format across different operating systems. 
