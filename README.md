@@ -43,31 +43,95 @@ For the PyPoll challenge, we'll use the `election_data.csv`, structured with thr
 Each row in this dataset represents an individual vote, contributing to the overall analysis of the election results, including vote counts, candidate popularity, and voting demographics. 
 ## Implementation
 ### PyBank
-This section details the implementation of the Python script for the PyBank challenge, breaking down each part of the script for clarity. 
+The following section provides a detailed walkthrough of the Python script implemented for the PyBank challenge. This script is designed to analyze financial data and extract key metrics such as total months, net total profit/losses, and identifying significant fluctuations in profits.
 #### Importing Modules
 ```python
 # Import modules
 import os
 import csv
 ```
-First, we import the necessary modules. `os` is used for operating system-dependent functionality like reading file paths, and `csv` for reading and writing CSV files.
-#### Initializing Variables and Lists
+Initially, the script imports necessary modules - `os` for handling file paths and `csv` for reading CSV files.
+#### Initializing Variables for Analysis
 ```python
-# Initialize variables
-row1 = 0
-row2 = 0
-change_month = 0
+# Initializing variables for analysis
 total_months = 0
-net = 0
-
-# Initialize lists to store data
-date = []
-profitLosses = []
+net_total = 0
+monthly_changes = []
+dates = []
 ```
-Here, we initialize variables for tracking financial calculations and lists for storing date and profit/loss changes. This ensures they are ready to store data as we process the CSV file. 
-#### Setting the File Path
+Variables and lists are initialized here for tracking the total number of months (`total_months`), the net total amount of profit/losses (`net_total`), and storing monthly changes in profit/losses (`monthly_changes`) and their corresponding dates (`dates`). 
+#### Setting the File Path and Reading the CSV
 ```python
-# Create path to csv file
-path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
+# Path to the CSV file
+csv_path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
+
+# Processing the CSV file
+with open(csv_path, newline='') as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=',')
+    
+    # Skip the header
+    next(csvreader)
 ```
-The path to the `budget_data.csv` file is set using `os.path.join`, which ensures the correct file path format across different operating systems. 
+The path to the CSV file is defined, and the file is opened for reading. The `csv.reader` is used to parse the file, and `next(csvreader)` skips the header row.
+#### Processing the CSV Data
+```python
+  # Read the first row to initialize variables
+    first_row = next(csvreader)
+    total_months = 1
+    net_total = int(first_row[1])
+    previous_amount = int(first_row[1])
+
+    # Iterating over each row in the CSV
+    for row in csvreader:
+        # Tracking the total months and net total
+        total_months += 1
+        current_amount = int(row[1])
+        net_total += current_amount
+
+        # Calculating the monthly change and storing it
+        change = current_amount - previous_amount
+        monthly_changes.append(change)
+        dates.append(row[0])
+
+        # Updating the previous amount for the next iteration
+        previous_amount = current_amount
+```
+The script reads the first data row to initialize the analysis. Then, a `for` loop iterates over each row in the CSV. In each iteration, it updates the total months and net total. It calculates the change in profit/losses compared to the previous month and stores this data along with the corresponding date.
+#### Calculating Key Financial Metrics
+```python
+# Calculating average change, greatest increase and decrease
+average_change = round(sum(monthly_changes) / len(monthly_changes), 2)
+greatest_increase = max(monthly_changes)
+greatest_decrease = min(monthly_changes)
+```
+After processing the data, the script calculates the average monthly change, the greatest increase, and the greatest decrease in profits.
+#### Identifying Dates for Extremes in Profit/Losses
+```python
+# Dates of greatest increase and decrease
+greatest_increase_date = dates[monthly_changes.index(greatest_increase)]
+greatest_decrease_date = dates[monthly_changes.index(greatest_decrease)]
+```
+The dates associated with the greatest increase and decrease in profits are identified using the indices of the maximum and minimum values in `monthly_changes`.
+#### Outputting the Results
+```python
+# Printing the financial analysis
+print("Financial Analysis\n")
+print("-------------------------------\n")
+print(f"Total Months: {total_months}\n")
+print(f"Total: ${net_total}\n")
+print(f"Average Change: ${average_change}\n")
+print(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})\n")
+print(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})\n")
+
+# Writing the results to a text file
+results_path = os.path.join('PyBank', 'Analysis', 'results.txt')
+with open(results_path, "w") as text_file:
+    text_file.write("Financial Analysis\n")
+    text_file.write("-------------------------------\n")
+    text_file.write(f"Total Months: {total_months}\n")
+    text_file.write(f"Total: ${net_total}\n")
+    text_file.write(f"Average Change: ${average_change}\n")
+    text_file.write(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})\n")
+    text_file.write(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})\n")
+```
+Finally, the script prints the analysis results to the terminal and writes them to a text file. This ensures that the results are easily accessible both during runtime and for later reference.
