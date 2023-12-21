@@ -16,6 +16,7 @@ Both challenges serve as a practical application of Python in data processing an
 - [Implementation](#implementation)
 - [Insights](#insights)
 - [Conclusion](#conclusion)
+- [How to Run the Scripts](#how-to-run-the-scripts)
 
 ## Objective
 The primary objective of this project is to develop and demonstrate proficiency in Python programming through two distinct, real-world challenges: PyBank and PyPoll.
@@ -285,3 +286,16 @@ For the PyPoll challenge, Python proved to be an invaluable tool in modernizing 
 * **Enhanced Skillset**: Working through these challenges has not only strengthened Python programming skills but also provided deeper insights into how these skills can be leveraged in real-world data analysis scenarios.
 
 In summary, "Automating with Python" underscores the significance of Python in today's data-driven world, showcasing its role in simplifying data processing and extraction of meaningful insights from vast and varied datasets. This project stands as a testament to the growing importance and application of Python in various professional fields.
+## How to Run the Scripts
+### Prerequisites
+* Ensure Python is installed on your system.
+* Download or clone the repository containing the scripts and datasets.
+### Running PyBank Script
+1. **Navigate to the PyBank Directory**: Open a command line interface and navigate to the 'PyBank' directory in the project.
+2. **Execute the Script**: Run the script using Python by entering `python main.py`.
+### Running PyPoll Script
+1. **Navigate to the PyPoll Directory**: Similarly, navigate to the 'PyPoll' directory in the project.
+2. **Execute the Script**: Execute the script by typing `python main.py`.
+### Viewing the Results
+* After running each script, the results will be displayed in the terminal.
+* Additionally, the results are saved to a text file in the respective 'Analysis' subdirectory for each challenge.
